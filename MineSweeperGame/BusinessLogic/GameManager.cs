@@ -112,10 +112,8 @@ namespace MineSweeperLogic.BusinessLogic
             }
             return outputField;
         }
-
-        // calculate the number of adjacent mines for each matrix element
         /// <summary>
-        /// 
+        /// calculate the number of adjacent mines for each matrix element
         /// </summary>
         /// <param name="x"></param>
         /// <param name="y"></param>

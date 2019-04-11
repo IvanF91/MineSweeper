@@ -1,4 +1,5 @@
-﻿using MineSweeperGame.Common.Constants;
+﻿using MineSweeperGame.BusinessLogic;
+using MineSweeperGame.Common.Constants;
 using MineSweeperGame.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -8,9 +9,15 @@ using System.Data.SqlClient;
 
 namespace MineSweeperGame.DataAccess
 {
+    /// <summary>
+    /// Manages the connectioin to the database
+    /// </summary>
     public static class DBHelper
-    {
-        // Get the recors from the database table and store them into a List, which is returned to the caller
+    { 
+        /// <summary>
+        /// Get the records from the database table and store them into a List, which is returned to the caller
+        /// </summary>
+        /// <returns></returns>
         public static List<IFieldSettings> GetRecords()
         {
             List<IFieldSettings> fs = new List<IFieldSettings>();
@@ -46,7 +53,11 @@ namespace MineSweeperGame.DataAccess
                 return fs;
             }
         }
-
+        /// <summary>
+        /// returs the connection string
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
         public static string GetConnectionString(string name)
         {
             return ConfigurationManager.ConnectionStrings[name].ConnectionString;

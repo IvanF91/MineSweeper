@@ -4,10 +4,16 @@ using System.Collections.Generic;
 
 namespace MineSweeperGame.BusinessLogic
 {
-    // manage every output operations that has to be displayed
+    /// <summary>
+    /// manages every output operations that has to be displayed
+    /// </summary>
     public class OutputManager
     {
-        // print the list of input fields
+        /// <summary>
+        /// prints the list of input fields
+        /// </summary>
+        /// <param name="fs"></param>
+        /// <param name="inputField"></param>
         public void PrintInput(List<IFieldSettings> fs, List<char[,]> inputField)
         {
             Console.WriteLine("INPUT");
@@ -25,8 +31,11 @@ namespace MineSweeperGame.BusinessLogic
                 Console.WriteLine();
             }
         }
-
-        //print the list of output fields
+        /// <summary>
+        /// prints the list of output fields
+        /// </summary>
+        /// <param name="fs"></param>
+        /// <param name="outputField"></param>
         public void PrintOutput(List<IFieldSettings> fs, List<string[,]> outputField)
         {
             Console.WriteLine("OUTPUT");
