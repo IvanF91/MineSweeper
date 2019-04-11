@@ -2,6 +2,9 @@
 
 namespace MineSweeperGame.BusinessLogic
 {
+    /// <summary>
+    /// Model that contains the settings of a mine field
+    /// </summary>
     public class FieldSettings : IFieldSettings
     {
         public int FieldId { get; set ; }
